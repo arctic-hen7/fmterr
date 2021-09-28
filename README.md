@@ -4,7 +4,7 @@
 [![Crate Page](https://img.shields.io/crates/v/fmterr?style=for-the-badge)](https://crates.io/crates/fmterr)
 [![Top Language](https://img.shields.io/github/languages/top/arctic-hen7/fmterr?style=for-the-badge)]()
 
-`fmterr` (pronounced _fumpterr_ obviously!) is a tiny error reporting tool for Rust! If you have an error with a chain of sources and you want to display it to the user without bringing in something like `anyhow`, `fmterr` is for you! Just run `fmt_err(&err)` and you'll get a string error message that displays the source chain nicely for end users.
+`fmterr` (pronounced _fumpterr_ obviously!) is a tiny error reporting tool for Rust! If you have an error with a chain of sources and you want to display it to the user without bringing in something like [`anyhow`](https://github.com/dtolnay/anyhow), `fmterr` is for you! Just run `fmt_err(&err)` and you'll get a string error message that displays the source chain nicely for end users.
 
 ## Usage
 
@@ -39,7 +39,7 @@ Error: entity not found
 
 ## `fmterr` vs `anyhow`
 
-Most library applications will use `thiserror` or the like to create their errors, and then they'll sometimes need a formatting tool. If you use `anyhow` as a formatting tool, you're basically using a sledgehammer to fix a dent, you just don't need it all! That said, `anyhow` is fantastic for applications where the rest of its features are needed.
+Most library applications will use [`thiserror`](https://github.com/dtolnay/thiserror) or the like to create their errors, and then they'll sometimes need a formatting tool. If you use [`anyhow`](https://github.com/dtolnay/anyhow) as a formatting tool, you're basically using a sledgehammer to fix a dent, you just don't need it all! That said, [`anyhow`](https://github.com/dtolnay/anyhow) is fantastic for applications where the rest of its features are needed.
 
 ## Contributing
 
