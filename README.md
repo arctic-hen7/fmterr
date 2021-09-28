@@ -1,18 +1,12 @@
-<h1 align="center">fmterr</h1>
+# `fmterr`
 
 [![API Docs](https://img.shields.io/docsrs/fmterr?label=API%20Docs&style=for-the-badge)](https://docs.rs/fmterr)
 [![Crate Page](https://img.shields.io/crates/v/fmterr?style=for-the-badge)](https://crates.io/crates/fmterr)
 [![Top Language](https://img.shields.io/github/languages/top/arctic-hen7/fmterr?style=for-the-badge)]()
 
-`fmterr` (pronounced _fumpterr_ obviously!) is an error handling and reporting tool for Rust that extends on `thiserror` to provide a very simple API for creating and formatting errors in Rust. If you have an error with a chain of sources and you want to display it to the user without bringing in something like `anyhow`, `fmterr` is for you! Just run `fmt_err(&err)` and you'll get a string error message that displays the source chain nicely for end users.
-
-`fmterr` also supports setting custom properties on error `enum`s, like making every error variant have its own HTTP status code if you're building a server app.
+`fmterr` (pronounced _fumpterr_ obviously!) is a tiny error reporting tool for Rust! If you have an error with a chain of sources and you want to display it to the user without bringing in something like `anyhow`, `fmterr` is for you! Just run `fmt_err(&err)` and you'll get a string error message that displays the source chain nicely for end users.
 
 ## Usage
-
-Note that `fmterr` supports two main feature flags: `fmt` and `def`, which are both enabled by default. You can use `fmt` if you only want to format errors with this module, or `def` if you only want to define errors with this module.
-
-### Formatting Errors
 
 You can use `fmterr` to format any error that implements `std::error::Error` (basically any error worth its salt) like so:
 
@@ -43,9 +37,9 @@ Or just this if you use something without a source (with an `io::ErrorKind::NotF
 Error: entity not found
 ```
 
-### Defining Errors
+## `fmterr` vs `anyhow`
 
-TODO
+Most library applications will use `thiserror` or the like to create their errors, and then they'll sometimes need a formatting tool. If you use `anyhow` as a formatting tool, you're basically using a sledgehammer to fix a dent, you just don't need it all! That said, `anyhow` is fantastic for applications where the rest of its features are needed.
 
 ## Contributing
 
