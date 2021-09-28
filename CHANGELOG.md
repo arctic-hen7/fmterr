@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/arctic-hen7/fmterr/compare/v0.1.0...v0.1.1) (2021-09-28)
+
+
+### Bug Fixes
+
+* 🐛 removed feature flags and added rustdocs ([0979763](https://github.com/arctic-hen7/fmterr/commit/097976392097e9b69be022e92351257e2ab7d28f))
+
 ## 0.1.0 (2021-09-28)
 
 
