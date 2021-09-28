@@ -1,0 +1,14 @@
+[package]
+name = "fmterr-macro"
+version = "0.1.0"
+edition = "2018"
+description = "Sane, all-in-one error management and reporting."
+authors = ["arctic_hen7 <arctic_hen7@pm.me>"]
+license = "MIT"
+repository = "https://github.com/arctic-hen7/fmterr"
+homepage = "https://github.com/arctic-hen7/fmterr"
+readme = "../README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
