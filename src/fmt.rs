@@ -1,6 +1,5 @@
 /// Formats an error to be displayed to a user. This will include a series of indented sources. If supplying a full source chain is
-/// not desired, `err.to_string()` should be used instead (and you can use only the `def` eature of this crate if you're using that,
-/// otherwise you probably don't need this crate at all).
+/// not desired, `err.to_string()` should be used instead (and you don't need this crate).
 pub fn fmt_err(err: &impl std::error::Error) -> String {
     // Used for functional recursion on the error source chain
     // For the given error, this will return its entire source chain
