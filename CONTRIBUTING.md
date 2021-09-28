@@ -31,15 +31,6 @@ Note that you'll also need `cargo watch` installed (`cargo install cargo-watch`)
 
 If the code you write needs to be documented in, the README, the book, or elsewhere, please do so! Also, **please ensure your code is commented**, it makes everything so much easier.
 
-## Branches
-
-fmterr uses a relatively intuitive branching system:
-
--   `main` -- the rolling-release version of the project, which should not be committed to directly
--   `stable` -- the stable version of the project, which should reflect released features (should be in line with latest tag)
-
-A separate branch is created for new features/fixes, which are then merged into `main` with pull requests. Note that new releases can only be authored from the `stable` branch (checked by Bonnie).
-
 ## Committing
 
 We use the Conventional Commits system, but you can commit however you want. Your pull request will be squashed and merged into a single compliant commit, so don't worry about this!

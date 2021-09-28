@@ -7,26 +7,11 @@ test.desc = "runs tests, watching for changes"
 # Releases the project (maintainers only)
 # We commit all staged files so we can manually bump the Cargo version
 release.cmd = [
-    "bonnie check-branch stable",
     "standard-version --sign --commit-all && git push --follow-tags %% origin stable",
-    "git checkout main",
-    "git merge stable",
-    "git push %% origin main",
-    "git checkout stable"
+    "git push %% origin main"
 ]
-release.desc = "creates a new project release and pushes it to github (cargo version must be manually bumped, needs branch 'stable')"
+release.desc = "creates a new project release and pushes it to github (cargo version must be manually bumped)"
 
 # Publishes each package
-publish.cmd = [
-    "bonnie check-branch stable",
-    "cd fmterr-macro",
-    "cargo publish %%",
-    "cd ../",
-    "cargo publish %%"
-]
-publish.desc = "publishes all packages to crates.io (needs branch 'stable')"
-
-check-branch.cmd.exec = "[[ $(git rev-parse --abbrev-ref HEAD) == \"%branch\" ]] && exit 0 || echo \"You need to be on Git branch '%branch' to run this command.\"; exit 1"
-check-branch.cmd.shell = ["bash", "-c", "{COMMAND}"]
-check-branch.args = [ "branch" ]
-check-branch.desc = "checks if the current git branch is the given argument, signals with exit codes (and warns), this will prevent following commands from running if it fails"
+publish.cmd = "cargo publish %%"
+publish.desc = "publishes to crates.io"
